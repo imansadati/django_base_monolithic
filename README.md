@@ -33,14 +33,12 @@ Handles Django initialization tasks like database migrations. Key functions:
 Starts the application based on the `DJANGO_ENV`:
 - In development: Runs `runserver`.
 - In production: Runs `collectstatic`, `migrate`, and Gunicorn.
----
-
 
 ## Setup and Usage 
 
 ### 1. Clone the Repository 
 ```bash
-git clone https://github.com/imansadati/django_base_monolithic
+git clone https://github.com/imansadati/django_base_monolithic.git
 ```
 
 ### 2. Configure the Environment
@@ -77,4 +75,4 @@ docker-compose -f docker-compose.prod.yml up --build
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for details.
