@@ -19,8 +19,6 @@ services:
       context: .
     container_name: app
     image: app:1.0
-    volumes:
-      - .:/app/
     networks:
       - main
     depends_on:

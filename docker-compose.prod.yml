@@ -20,7 +20,6 @@ services:
     image: app:1.0
     container_name: app
     volumes:
-      - .:/app/
       - static:/app/src/static
       - media:/app/src/media
     networks:
