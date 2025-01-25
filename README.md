@@ -19,8 +19,6 @@ The following environment variables must be configured in the `.env` file:
 
 - **`DJANGO_ENV`**: Determines the environment mode (`development` or `production`).
 
----
-
 ## Custom Django Base Image
 This project uses a custom Django base image available on Docker Hub. The image includes:
 - Python 3.12
