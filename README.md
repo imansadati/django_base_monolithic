@@ -19,6 +19,16 @@ The following environment variables must be configured in the `.env` file:
 
 - **`DJANGO_ENV`**: Determines the environment mode (`development` or `production`).
 
+---
+
+## Custom Django Base Image
+This project uses a custom Django base image available on Docker Hub. The image includes:
+- Python 3.12
+- Common dependencies for Django applications (e.g., `gunicorn`, `psycopg2`)
+- Optimized for both development and production use
+
+For more details, visit the [Docker Hub page](https://hub.docker.com/r/imansadatii/python-base).
+
 
 ## Scripts and Configuration
 
@@ -41,10 +51,7 @@ Starts the application based on the `DJANGO_ENV`:
 git clone https://github.com/imansadati/django_base_monolithic.git
 ```
 
-### 2. Configure the Environment
-Create a `.env` file and populate it with the necessary environment variables.
-
-### 3. Create a Virtual Environment (for development mode)
+### 2. Create a Virtual Environment (for development mode)
 ```bash
 python -m venv venv
 venv/scripts/activate
@@ -52,7 +59,7 @@ python.exe -m pip install --upgrade pip
 pip install -r .\requirements\production.txt
 ```
 
-### 4. Build and Run (Development)
+### 3. Build and Run (Development)
 in `.env` file:
 ```bash
 DJANGO_ENV=development
@@ -62,7 +69,7 @@ after run:
 docker-compose up --build
 ```
 
-### 5. Build and Run (Production)
+### 4. Build and Run (Production)
 in `.env` file:
 ```bash
 DJANGO_ENV=production
